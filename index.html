@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <main>
-        <section>
-            <div class="infos">
-                <div class="info">
-                    <h3>High Score:<span id="high-score">0</span></h3>
-                </div>
-                <div class="info">
-                    <h3>Score:<span id="score">0</span></h3>
-                </div>
-                <div class="info">
-                    <h3>Time:<span id="time">00-00</span></h3>
-                </div>
-            </div>
-            <div class="board">
-            </div>
-        </section>
+      <section class="game-shell">
+        <div class="infos">
+          <div class="info">
+            <h3>High Score: <span id="high-score">0</span></h3>
+          </div>
+          <div class="info">
+            <h3>Score: <span id="score">0</span></h3>
+          </div>
+          <div class="info">
+            <h3>Time: <span id="time">00:00</span></h3>
+          </div>
+        </div>
+        <div class="board-wrap">
+          <div class="board" aria-label="Snake game board"></div>
+          <div class="overlay hidden" id="overlay">
+            <h2>Game Over</h2>
+            <p>Press Restart or hit Enter to play again.</p>
+            <button id="restart-btn" type="button">Restart</button>
+          </div>
+        </div>
+        <div class="controls" aria-label="Game controls">
+          <button class="control-btn" data-direction="up" type="button">
+            Up
+          </button>
+          <div class="controls-row">
+            <button class="control-btn" data-direction="left" type="button">
+              Left
+            </button>
+            <button class="control-btn" data-direction="down" type="button">
+              Down
+            </button>
+            <button class="control-btn" data-direction="right" type="button">
+              Right
+            </button>
+          </div>
+          <p class="hint">Use Arrow Keys or WASD on keyboard.</p>
+        </div>
+      </section>
     </main>
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
